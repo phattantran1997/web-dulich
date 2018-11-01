@@ -2164,7 +2164,7 @@ input[type="search"] {
     line-height: 46px;
   }
 }
-.form-group {
+. {
   margin-bottom: 15px;
 }
 
@@ -3481,16 +3481,6 @@ tbody.collapse.in {
   border: 1px solid transparent;
   border-radius: 4px 4px 0 0;
 }
-.nav-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee #ddd;
-}
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  color: #555555;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-bottom-color: transparent;
-  cursor: default;
-}
 
 .nav-pills > li {
   float: left;
@@ -3568,6 +3558,7 @@ tbody.collapse.in {
 
 .tab-content > .tab-pane {
   display: none;
+
 }
 .tab-content > .active {
   display: block;
