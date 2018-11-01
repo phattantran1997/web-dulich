@@ -14,31 +14,21 @@
 	<link rel="stylesheet" href="css/icomoon.css">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
-
 	<!-- Magnific Popup -->
 	<link rel="stylesheet" href="css/magnific-popup.css">
-
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="css/flexslider.css">
-
 	<!-- Owl Carousel -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-
 	<!-- Date Picker -->
 	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
 	<!-- Flaticons  -->
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
-
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
 
 	</head>
 	<body>
@@ -50,10 +40,10 @@
 			<div class="top-menu">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-xs-2">
+						<div class="col-sm-2">
 							<div id="colorlib-logo"><a href="index.html">S-TRAVEL</a></div>
 						</div>
-						<div class="col-xs-10 text-right menu-1">
+						<div class="col-sm-10 text-right menu-1">
 							<ul>
 								<li class="active"><a href="index.html">Trang chủ</a></li>
 								<li><a href="#">Địa điểm</a></li>
@@ -123,199 +113,156 @@
 		</aside>
 		
 		<div id="colorlib-reservation">
-			<!-- <div class="container"> -->
-				<div class="row">
-					<div class="search-wrap">
-						<div class="container">
-							<ul class="nav nav-tabs">
-								<li class="active">
-                                <a data-toggle="tab" href="#flight"><i class="flaticon-magnifier"></i>Tìm kiếm</a>
-                                 	</li>
-								<li><a data-toggle="tab" href="#hotel"><i class="flaticon-resort"></i>Tours</a></li>
-								<li><a data-toggle="tab" href="#car"><i class="flaticon-car"></i>Khách sạn</a></li>
-								<li><a data-toggle="tab" href="#cruises"><i class="flaticon-boat"></i>Địa điểm</a></li>
-							</ul>
+			<div class="row">
+				<div class="search-wrap">
+					<div class="container">
+						<ul class="nav nav-tabs">
+							<li class="active">
+							<a data-toggle="tab" href="#flight"><i class="flaticon-magnifier"></i>Tìm kiếm</a></li>
+							<li><a data-toggle="tab" href="#hotel"><i class="flaticon-resort"></i>Tours</a></li>
+							<li><a data-toggle="tab" href="#car"><i class="flaticon-car"></i>Khách sạn</a></li>
+							<li><a data-toggle="tab" href="#cruises"><i class="flaticon-boat"></i>Địa điểm</a></li>
+						</ul>
+					</div>
+					<div class="tab-content">
+						<div id="flight" class="tab-pane fade in active">
+							<form method="post" class="colorlib-form">
+							<div class="row">
+								<div class="col-md-12">
+								<div class="form-group">
+								<label for="date">Nơi bạn muốn tìm kiếm là gì?</label>
+								<div class="form-field">
+									<input type="text" id="location" class="form-control" placeholder="Search Location">
+								</div>
+								</div>
+								</div>
+							</div>
+						</form>
 						</div>
-						<div class="tab-content">
-							<div id="flight" class="tab-pane fade in active">
-								<form method="post" class="colorlib-form">
-				              	<div class="row">
-				              	 <div class="col-md-12">
-				              	 	<div class="form-group">
-				                    <label for="date">Nơi bạn muốn tìm kiếm là gì?</label>
-				                    <div class="form-field">
-				                      <input type="text" id="location" class="form-control" placeholder="Search Location">
-				                    </div>
-				                  </div>
-				              	 </div>
-				              </div>
-				            </form>
-				         </div>
-				         <div id="hotel" class="tab-pane fade">
-						      <form method="post" class="colorlib-form">
-				              	<div class="row">
-				              	 <div class="col-md-2">
-				              	 	<div class="booknow">
-				              	 		<h2>Book Now</h2>
-					              	 	<span>Best Price Online</span>
-				              	 	</div>
-				              	 </div>
-				                <div class="col-md-3">
-				                  <div class="form-group">
-				                    <label for="date">Check-in:</label>
-				                    <div class="form-field">
-				                      <i class="icon icon-calendar2"></i>
-				                      <input type="text" id="date" class="form-control date" placeholder="Check-in date">
-				                    </div>
-				                  </div>
-				                </div>
-				                <div class="col-md-3">
-				                  <div class="form-group">
-				                    <label for="date">Check-out:</label>
-				                    <div class="form-field">
-				                      <i class="icon icon-calendar2"></i>
-				                      <input type="text" id="date" class="form-control date" placeholder="Check-out date">
-				                    </div>
-				                  </div>
-				                </div>
-				                <div class="col-md-2">
-				                  <div class="form-group">
-				                    <label for="guests">Guest</label>
-				                    <div class="form-field">
-				                      <i class="icon icon-arrow-down3"></i>
-				                      <select name="people" id="people" class="form-control">
-				                        <option value="#">1</option>
-				                        <option value="#">2</option>
-				                        <option value="#">3</option>
-				                        <option value="#">4</option>
-				                        <option value="#">5+</option>
-				                      </select>
-				                    </div>
-				                  </div>
-				                </div>
-				                <div class="col-md-2">
-				                  <input type="submit" name="submit" id="submit" value="Find Hotel" class="btn btn-primary btn-block">
-				                </div>
-				              </div>
-				            </form>
-						   </div>
-						   <div id="car" class="tab-pane fade">
-						   	<form method="post" class="colorlib-form">
-				              	<div class="row">
-				              	 <div class="col-md-4">
-				              	 	<div class="form-group">
-				                    <label for="date">Where:</label>
-				                    <div class="form-field">
-				                      <input type="text" id="location" class="form-control" placeholder="Search Location">
-				                    </div>
-				                  </div>
-				              	 </div>
-				                <div class="col-md-3">
-				                  <div class="form-group">
-				                    <label for="date">Start Date:</label>
-				                    <div class="form-field">
-				                      <i class="icon icon-calendar2"></i>
-				                      <input type="text" id="date" class="form-control date" placeholder="Check-in date">
-				                    </div>
-				                  </div>
-				                </div>
-				                <div class="col-md-3">
-				                  <div class="form-group">
-				                    <label for="date">Return Date:</label>
-				                    <div class="form-field">
-				                      <i class="icon icon-calendar2"></i>
-				                      <input type="text" id="date" class="form-control date" placeholder="Check-out date">
-				                    </div>
-				                  </div>
-				                </div>
-				                <div class="col-md-2">
-				                  <input type="submit" name="submit" id="submit" value="Find Car" class="btn btn-primary btn-block">
-				                </div>
-				              </div>
-				            </form>
-						   </div>
-						   <div id="cruises" class="tab-pane fade">
-						      <form method="post" class="colorlib-form">
-				              	<div class="row">
-				              	 <div class="col-md-4">
-				              	 	<div class="form-group">
-				                    <label for="date">Where:</label>
-				                    <div class="form-field">
-				                      <input type="text" id="location" class="form-control" placeholder="Search Location">
-				                    </div>
-				                  </div>
-				              	 </div>
-				                <div class="col-md-3">
-				                  <div class="form-group">
-				                    <label for="date">Start Date:</label>
-				                    <div class="form-field">
-				                      <i class="icon icon-calendar2"></i>
-				                      <input type="text" id="date" class="form-control date" placeholder="Check-in date">
-				                    </div>
-				                  </div>
-				                </div>
-				                <div class="col-md-3">
-				                  <div class="form-group">
-				                    <label for="guests">Categories</label>
-				                    <div class="form-field">
-				                      <i class="icon icon-arrow-down3"></i>
-				                      <select name="category" id="category" class="form-control">
-				                        <option value="#">Suite</option>
-				                        <option value="#">Super Deluxe</option>
-				                        <option value="#">Balcony</option>
-				                        <option value="#">Economy</option>
-				                        <option value="#">Luxury</option>
-				                      </select>
-				                    </div>
-				                  </div>
-				                </div>
-				                <div class="col-md-2">
-				                  <input type="submit" name="submit" id="submit" value="Find Cruises" class="btn btn-primary btn-block">
-				                </div>
-				              </div>
-				            </form>
-						   </div>
-							 <div id="aa" class="tab-pane fade">
-									<form method="post" class="colorlib-form">
-												<div class="row">
-												 <div class="col-md-4">
-													<div class="form-group">
-														<label for="date">Where:</label>
-														<div class="form-field">
-															<input type="text" id="location" class="form-control" placeholder="Search Location">
-														</div>
-													</div>
-												 </div>
-												<div class="col-md-3">
-													<div class="form-group">
-														<label for="date">Start Date:</label>
-														<div class="form-field">
-															<i class="icon icon-calendar2"></i>
-															<input type="text" id="date" class="form-control date" placeholder="Check-in date">
-														</div>
-													</div>
-												</div>
-												<div class="col-md-3">
-													<div class="form-group">
-														<label for="guests">Categories</label>
-														<div class="form-field">
-															<i class="icon icon-arrow-down3"></i>
-															<select name="category" id="category" class="form-control">
-																<option value="#">Suite</option>
-																<option value="#">Super Deluxe</option>
-																<option value="#">Balcony</option>
-																<option value="#">Economy</option>
-																<option value="#">Luxury</option>
-															</select>
-														</div>
-													</div>
-												</div>
-												<div class="col-md-2">
-													<input type="submit" name="submit" id="submit" value="Find Cruises" class="btn btn-primary btn-block">
-												</div>
-											</div>
-										</form>
-							 </div>
+						<div id="hotel" class="tab-pane fade">
+							<form method="post" class="colorlib-form">
+							<div class="row">
+								<div class="col-md-2">
+								<div class="booknow">
+									<h2>Book Now</h2>
+									<span>Best Price Online</span>
+								</div>
+								</div>
+							<div class="col-md-3">
+								<div class="form-group">
+								<label for="date">Check-in:</label>
+								<div class="form-field">
+									<i class="icon icon-calendar2"></i>
+									<input type="text" id="date" class="form-control date" placeholder="Check-in date">
+								</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+								<label for="date">Check-out:</label>
+								<div class="form-field">
+									<i class="icon icon-calendar2"></i>
+									<input type="text" id="date" class="form-control date" placeholder="Check-out date">
+								</div>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="form-group">
+								<label for="guests">Guest</label>
+								<div class="form-field">
+									<i class="icon icon-arrow-down3"></i>
+									<select name="people" id="people" class="form-control">
+									<option value="#">1</option>
+									<option value="#">2</option>
+									<option value="#">3</option>
+									<option value="#">4</option>
+									<option value="#">5+</option>
+									</select>
+								</div>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<input type="submit" name="submit" id="submit" value="Find Hotel" class="btn btn-primary btn-block">
+							</div>
+							</div>
+						</form>
+						</div>
+						<div id="car" class="tab-pane fade">
+						<form method="post" class="colorlib-form">
+							<div class="row">
+								<div class="col-md-4">
+								<div class="form-group">
+								<label for="date">Where:</label>
+								<div class="form-field">
+									<input type="text" id="location" class="form-control" placeholder="Search Location">
+								</div>
+								</div>
+								</div>
+							<div class="col-md-3">
+								<div class="form-group">
+								<label for="date">Start Date:</label>
+								<div class="form-field">
+									<i class="icon icon-calendar2"></i>
+									<input type="text" id="date" class="form-control date" placeholder="Check-in date">
+								</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+								<label for="date">Return Date:</label>
+								<div class="form-field">
+									<i class="icon icon-calendar2"></i>
+									<input type="text" id="date" class="form-control date" placeholder="Check-out date">
+								</div>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<input type="submit" name="submit" id="submit" value="Find Car" class="btn btn-primary btn-block">
+							</div>
+							</div>
+						</form>
+						</div>
+						<div id="cruises" class="tab-pane fade">
+							<form method="post" class="colorlib-form">
+							<div class="row">
+								<div class="col-md-4">
+								<div class="form-group">
+								<label for="date">Where:</label>
+								<div class="form-field">
+									<input type="text" id="location" class="form-control" placeholder="Search Location">
+								</div>
+								</div>
+								</div>
+							<div class="col-md-3">
+								<div class="form-group">
+								<label for="date">Start Date:</label>
+								<div class="form-field">
+									<i class="icon icon-calendar2"></i>
+									<input type="text" id="date" class="form-control date" placeholder="Check-in date">
+								</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+								<label for="guests">Categories</label>
+								<div class="form-field">
+									<i class="icon icon-arrow-down3"></i>
+									<select name="category" id="category" class="form-control">
+									<option value="#">Suite</option>
+									<option value="#">Super Deluxe</option>
+									<option value="#">Balcony</option>
+									<option value="#">Economy</option>
+									<option value="#">Luxury</option>
+									</select>
+								</div>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<input type="submit" name="submit" id="submit" value="Find Cruises" class="btn btn-primary btn-block">
+							</div>
+							</div>
+						</form>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -370,7 +317,7 @@
 					<div class="tour-img" style="background-image: url(images/phanthiet.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Người đánh giá</p>
 						<h2>Phan Thiết </h2>
 						<span class="city">Bình Thuận</span>
 					</span>
@@ -379,7 +326,7 @@
 					<div class="tour-img" style="background-image: url(images/hanoi.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Người đánh giá</p>
 						<h2>Hà Nội</h2>
 						<span class="city">Miền Bắc</span>
 					</span>
@@ -388,7 +335,7 @@
 					<div class="tour-img" style="background-image: url(images/sapa.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Người đánh giá</p>
 						<h2>Sa Pa</h2>
 						<span class="city">Lào Cai</span>
 					</span>
@@ -397,7 +344,7 @@
 					<div class="tour-img" style="background-image: url(images/halong.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Người đánh giá</p>
 						<h2>Vịnh Hạ Long</h2>
 						<span class="city">Quảng Ninh</span>
 					</span>
@@ -406,7 +353,7 @@
 					<div class="tour-img" style="background-image: url(images/quynhon.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Người đánh giá</p>
 						<h2>Quy Nhơn</h2>
 						<span class="city">Bình Định</span>
 
@@ -416,7 +363,7 @@
 					<div class="tour-img" style="background-image: url(images/danang.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Người đánh giá</p>
 						<h2>Đà Nẵng</h2>
 						<span class="city">Miền Trung</span>
 					</span>
@@ -425,7 +372,7 @@
 					<div class="tour-img" style="background-image: url(images/ninhbinh.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Người đánh giá</p>
 						<h2>Ninh Bình</h2>
 						<span class="city">tỉnh Ninh Bình</span>
 					</span>
@@ -434,7 +381,7 @@
 					<div class="tour-img" style="background-image: url(images/tayninh.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Người đánh giá</p>
 						<h2>Tây Ninh</h2>
 						<span class="city">Quê hương tôi</span>
 					</span>
@@ -526,7 +473,7 @@
 											</div>
 									</div>
 								</div>
-								<p class="text-center"><a href="#" class="btn btn-primary">Xem thêm</a></p>
+								<p class="text-center animate-box"><a href="#" class="btn btn-primary">Xem thêm</a></p>
 							</div>
 						</div>
 					</div>
@@ -620,8 +567,6 @@
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
@@ -630,9 +575,6 @@
 	<script src="js/jquery.flexslider-min.js"></script>
 	<!-- Owl carousel -->
 	<script src="js/owl.carousel.min.js"></script>
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
 	<!-- Date Picker -->
 	<script src="js/bootstrap-datepicker.js"></script>
 	<!-- Stellar Parallax -->
