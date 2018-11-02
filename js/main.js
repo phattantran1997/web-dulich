@@ -2,10 +2,25 @@
 	
 	'use strict';
 
-	
-	// Loading page
-	var loaderPage = function() {
-		$(".loader").fadeOut("slow");
+	var isMobile = {
+		Android: function() {
+			return navigator.userAgent.match(/Android/i);
+		},
+			BlackBerry: function() {
+			return navigator.userAgent.match(/BlackBerry/i);
+		},
+			iOS: function() {
+			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		},
+			Opera: function() {
+			return navigator.userAgent.match(/Opera Mini/i);
+		},
+			Windows: function() {
+			return navigator.userAgent.match(/IEMobile/i);
+		},
+			any: function() {
+			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		}
 	};
 
 	var mobileMenuOutsideClick = function() {
@@ -20,6 +35,8 @@
     			$('.js-colorlib-nav-toggle').removeClass('active');
 				
 	    	}
+	    
+	    	
 	    }
 		});
 
@@ -174,9 +191,15 @@
 	};
 
 
+	// Loading page
+	var loaderPage = function() {
+		$(".colorlib-loader").fadeOut("slow");
+	};
+
+
 	var sliderMain = function() {
 		
-	  	$('#slideshow .flexslider').flexslider({
+	  	$('#colorlib-hero .flexslider').flexslider({
 			animation: "fade",
 			slideshowSpeed: 5000,
 			directionNav: true,
@@ -242,7 +265,19 @@
 	     	]
 		});
 	};
-	
+
+	var parallax = function() {
+
+		if ( !isMobile.any() ) {
+			$(window).stellar({
+				horizontalScrolling: false,
+				hideDistantElements: false, 
+				responsive: true
+
+			});
+		}
+	};
+
 	var datePicker = function() {
 		// jQuery('#time').timepicker();
 		jQuery('.date').datepicker({
@@ -262,6 +297,7 @@
 		goToTop();
 		loaderPage();
 		owlCrouselFeatureSlide();
+		parallax();
 		datePicker();
 	});
 
