@@ -1832,3 +1832,6 @@ input[type="text"] {
   font-size: 20px;
   color: crimson;
 }
+.shake:hover{
+  animation: shake 1s infinite;
+}
