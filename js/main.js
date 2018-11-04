@@ -2,6 +2,27 @@
 	
 	'use strict';
 
+	var isMobile = {
+		Android: function() {
+			return navigator.userAgent.match(/Android/i);
+		},
+			BlackBerry: function() {
+			return navigator.userAgent.match(/BlackBerry/i);
+		},
+			iOS: function() {
+			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		},
+			Opera: function() {
+			return navigator.userAgent.match(/Opera Mini/i);
+		},
+			Windows: function() {
+			return navigator.userAgent.match(/IEMobile/i);
+		},
+			any: function() {
+			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		}
+	};
+
 	var mobileMenuOutsideClick = function() {
 
 		$(document).click(function (e) {
@@ -12,11 +33,9 @@
 
     			$('body').removeClass('offcanvas');
     			$('.js-topnav-toggle').removeClass('active');
-				
 	    	}
 	    }
 		});
-
 	};
 
 
@@ -176,26 +195,26 @@
 
 	var sliderMain = function() {
 		
-	  	$('#slideshow .flexslider').flexslider({
-			animation: "fade",
-			slideshowSpeed: 5000,
-			directionNav: true,
-			start: function(){
-				setTimeout(function(){
-					$('.slider-text').removeClass('animated fadeInUp');
-					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-				}, 500);
-			},
-			before: function(){
-				setTimeout(function(){
-					$('.slider-text').removeClass('animated fadeInUp');
-					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-				}, 500);
-			}
+		$('#slideshow .flexslider').flexslider({
+		  animation: "fade",
+		  slideshowSpeed: 5000,
+		  directionNav: true,
+		  start: function(){
+			  setTimeout(function(){
+				  $('.slider-text').removeClass('animated fadeInUp');
+				  $('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+			  }, 500);
+		  },
+		  before: function(){
+			  setTimeout(function(){
+				  $('.slider-text').removeClass('animated fadeInUp');
+				  $('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+			  }, 500);
+		  }
 
-	  	});
+		});
 
-	};
+  };
 
 	// Owl Carousel
 	var owlCrouselFeatureSlide = function() {
@@ -241,6 +260,18 @@
 		      "<i class='icon-chevron-right owl-direction'></i>"
 	     	]
 		});
+	};
+
+	var parallax = function() {
+
+		if ( !isMobile.any() ) {
+			$(window).stellar({
+				horizontalScrolling: false,
+				hideDistantElements: false, 
+				responsive: true
+
+			});
+		}
 	};
 
 	var datePicker = function() {

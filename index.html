@@ -59,7 +59,7 @@
 		<header id="slideshow">
 			<div class="flexslider">
 				<ul class="slides">
-			   	<li style="background-image: url(images/backgrounds/img_bg_1.jpg);">
+			   	<li style="background-image: url(images/backgrounds/landmark.jpg);">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
@@ -71,7 +71,7 @@
 				   		</div>
 			   		</div>
 			   	</li>
-			   	<li style="background-image: url(images/backgrounds/img_bg_2.jpg);">
+			   	<li style="background-image: url(images/backgrounds/cau-long-bien.jpg);">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
@@ -83,7 +83,7 @@
 				   		</div>
 			   		</div>
 			   	</li>
-			   	<li style="background-image: url(images/backgrounds/img_bg_5.jpg);">
+			   	<li style="background-image: url(images/backgrounds/cho-noi-vinh-lan-ha2.jpg);">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluids">
 			   			<div class="row">
@@ -95,7 +95,7 @@
 				   		</div>
 			   		</div>
 			   	</li>
-			   	<li style="background-image: url(images/backgrounds/img_bg_4.jpg);">
+			   	<li style="background-image: url(images/backgrounds/muc-dong.jpg);">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
@@ -117,150 +117,228 @@
 					<div class="container">
 						<ul class="nav nav-tabs">
 							<li class="active">
-							<a data-toggle="tab" href="#search"><i class="icon-search"></i> Tìm kiếm</a></li>
-							<li><a data-toggle="tab" href="#tours"><i class="icon-cloud"></i> Tours</a></li>
+							<a data-toggle="tab" href="#search"><i class="icon-location"></i> Địa điểm</a></li>
+							<li><a data-toggle="tab" href="#tours"><i class="icon-airplane"></i> Tours</a></li>
 							<li><a data-toggle="tab" href="#hotel"><i class="icon-home"></i> Khách sạn</a></li>
-							<li><a data-toggle="tab" href="#contact"><i class="icon-contacts"></i> Góp ý</a></li>
+							<li><a data-toggle="tab" href="#contact"><i class="icon-bubble"></i> Góp ý</a></li>
 						</ul>
 					</div>
+
 					<div class="tab-content">
 						<div id="search" class="tab-pane fade in active">
 							<form method="post" class="form">
-							<div class="row">
-								<div class="col-md-12">
-								<div class="form-group">
-								<label for="date">Nơi bạn muốn tìm kiếm là gì?</label>
-								<div class="form-field">
-									<input type="text" id="location" class="form-control" placeholder="Search Location">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label for="date">Nơi bạn muốn tìm kiếm là gì?</label>
+											<div class="form-field">
+												<input type="text" id="location" class="form-control" placeholder="Bất kì đâu . . . ">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-2 col-lg-offset-5">
+										<input type="submit" name="submit" id="submit" value="Tìm kiếm" class="btn btn-primary btn-block rotateOutDownLeft">
+									</div>
 								</div>
-								</div>
-								</div>
-							</div>
-						</form>
+							</form>
 						</div>
+
 						<div id="tours" class="tab-pane fade">
 							<form method="post" class="form">
 							<div class="row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<label for="guests">Nơi khởi hành</label>
+										<div class="form-field">
+											<i class="icon icon-arrow-down3"></i>
+											<select name="people" id="people" class="form-control">
+												<option value="#">Nơi khởi hành</option>
+												<option value="#">HCM</option>
+												<option value="#">Đà lạt</option>
+												<option value="#">Đà nẵng </option>
+												<option value="#">Huế</option>
+												<option value="#">Hà Nội</option>
+												<option value="#">Hải Phòng</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label for="guests">Nơi đến</label>
+										<div class="form-field">
+											<i class="icon icon-arrow-down3"></i>
+											<select name="people" id="people" class="form-control">
+												<option value="#">Nơi đến</option>
+												<option value="#">HCM</option>
+												<option value="#">Đà lạt</option>
+												<option value="#">Đà nẵng </option>
+												<option value="#">Huế</option>
+												<option value="#">Hà Nội</option>
+												<option value="#">Hải Phòng</option>
+											</select>
+										</div>
+									</div>
+								</div>
 								<div class="col-md-2">
-								<div class="booknow">
-									<h2>Book Now</h2>
-									<span>Best Price Online</span>
-								</div>
-								</div>
-							<div class="col-md-3">
 								<div class="form-group">
-								<label for="date">Check-in:</label>
-								<div class="form-field">
-									<i class="icon icon-calendar2"></i>
-									<input type="text" id="date" class="form-control date" placeholder="Check-in date">
+									<label for="date">Ngày khởi hành</label>
+									<div class="form-field">
+										<i class="icon icon-calendar2"></i>
+										<input type="text" id="date" class="form-control date" placeholder="Ngày xuất phát">
+									</div>
 								</div>
 								</div>
-							</div>
-							<div class="col-md-3">
+								<div class="col-md-2">
 								<div class="form-group">
-								<label for="date">Check-out:</label>
-								<div class="form-field">
-									<i class="icon icon-calendar2"></i>
-									<input type="text" id="date" class="form-control date" placeholder="Check-out date">
+									<label for="guests">Loại tour</label>
+									<div class="form-field">
+										<i class="icon icon-arrow-down3"></i>
+										<select name="people" id="people" class="form-control">
+											<option value="#">Tất cả</option>
+											<option value="#">Cao cấp</option>
+											<option value="#">Tiêu chuẩn</option>
+											<option value="#">Tiết kiệm</option>
+											<option value="#">Giá tốt</option>
+										</select>
+									</div>
 								</div>
 								</div>
-							</div>
-							<div class="col-md-2">
+								<div class="col-md-2">
 								<div class="form-group">
-								<label for="guests">Guest</label>
-								<div class="form-field">
-									<i class="icon icon-arrow-down3"></i>
-									<select name="people" id="people" class="form-control">
-									<option value="#">1</option>
-									<option value="#">2</option>
-									<option value="#">3</option>
-									<option value="#">4</option>
-									<option value="#">5+</option>
-									</select>
+									<label for="guests">Giá</label>
+									<div class="form-field">
+										<i class="icon icon-arrow-down3"></i>
+										<select name="people" id="people" class="form-control">
+											<option value="#">Tất cả</option>
+											<option value="#">Dưới 1 Triệu</option>
+											<option value="#">1-2 Triệu</option>
+											<option value="#">2-4 Triệu</option>
+											<option value="#">4-6 Triệu</option>
+											<option value="#">6-10 Triệu</option>
+											<option value="#">Trên 10 Triệu</option>
+										</select>
+									</div>
 								</div>
 								</div>
-							</div>
-							<div class="col-md-2">
-								<input type="submit" name="submit" id="submit" value="Find Hotel" class="btn btn-primary btn-block">
-							</div>
+
+								<div class="col-md-2 col-lg-offset-5">
+									<input type="submit" name="submit" id="submit" value="Tìm kiếms" class="btn btn-primary btn-block rotateOutDownLeft">
+								</div>
 							</div>
 						</form>
 						</div>
+
 						<div id="hotel" class="tab-pane fade">
 						<form method="post" class="form">
 							<div class="row">
-								<div class="col-md-4">
-								<div class="form-group">
-								<label for="date">Where:</label>
-								<div class="form-field">
-									<input type="text" id="location" class="form-control" placeholder="Search Location">
+								<div class="col-md-3">
+										<div class="form-group">
+											<label for="guests">Tỉnh thành</label>
+											<div class="form-field">
+												<i class="icon icon-arrow-down3"></i>
+												<select name="people" id="people" class="form-control">
+													<option value="#">Tỉnh/Thành</option>
+													<option value="#">HCM</option>
+													<option value="#">Đà lạt</option>
+													<option value="#">Đà nẵng </option>
+													<option value="#">Huế</option>
+													<option value="#">Hà Nội</option>
+													<option value="#">Hải Phòng</option>
+												</select>
+											</div>
+										</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<label for="date">Nhận phòng</label>
+										<div class="form-field">
+											<i class="icon icon-calendar2"></i>
+											<input type="text" id="date" class="form-control date" placeholder="Ngày nhận">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<label for="date">Trả phòng</label>
+											<div class="form-field">
+											<i class="icon icon-calendar2"></i>
+										<input type="text" id="date" class="form-control date" placeholder="Ngày trả">
+									</div>
 								</div>
 								</div>
+								<div class="col-md-1">
+									<div class="form-group">
+										<label for="guests">Số phòng</label>
+										<div class="form-field">
+											<i class="icon icon-arrow-down3"></i>
+											<select name="people" id="people" class="form-control">
+												<option value="#">1 </option>
+												<option value="#">2 </option>
+												<option value="#">3 </option>
+												<option value="#">4 </option>
+												<option value="#">5 </option>
+												<option value="#">6 </option>
+											</select>
+										</div>
+									</div>
 								</div>
-							<div class="col-md-3">
-								<div class="form-group">
-								<label for="date">Start Date:</label>
-								<div class="form-field">
-									<i class="icon icon-calendar2"></i>
-									<input type="text" id="date" class="form-control date" placeholder="Check-in date">
+								<div class="col-md-2">
+									<div class="form-group">
+										<label for="guests">Người lớn</label>
+										<div class="form-field">
+											<i class="icon icon-arrow-down3"></i>
+											<select name="people" id="people" class="form-control">
+												<option value="#">1 Người lớn</option>
+												<option value="#" selected="selected" >2 Người lớn</option>
+												<option value="#">3 Người lớn</option>
+												<option value="#">4 Người lớn</option>
+												<option value="#">5 Người lớn</option>
+												<option value="#">6 Người lớn</option>
+											</select>
+										</div>
+									</div>
 								</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="form-group">
-								<label for="date">Return Date:</label>
-								<div class="form-field">
-									<i class="icon icon-calendar2"></i>
-									<input type="text" id="date" class="form-control date" placeholder="Check-out date">
-								</div>
-								</div>
-							</div>
-							<div class="col-md-2">
-								<input type="submit" name="submit" id="submit" value="Find Car" class="btn btn-primary btn-block">
-							</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<label for="guests">Trẻ em</label>
+										<div class="form-field">
+											<i class="icon icon-arrow-down3"></i>
+											<select name="people" id="people" class="form-control">
+												<option value="#" selected="selected">0 Trẻ em</option>
+												<option value="#">1 Trẻ em</option>
+												<option value="#">2 Trẻ em</option>
+												<option value="#">3 Trẻ em</option>
+												<option value="#">4 Trẻ em</option>
+												<option value="#">5 Trẻ em</option>
+												<option value="#">6 Trẻ em</option>
+											</select>
+										</div>
+									</div>
+								</div> 
+								<div class="col-md-2 col-lg-offset-5">
+									<input type="submit" name="submit" id="submit" value="Tìm kiếm" class="btn btn-primary btn-block rotateOutDownLeft">
+								</div> 
 							</div>
 						</form>
 						</div>
+
 						<div id="contact" class="tab-pane fade">
 							<form method="post" class="form">
-							<div class="row">
-								<div class="col-md-4">
-								<div class="form-group">
-								<label for="date">Where:</label>
-								<div class="form-field">
-									<input type="text" id="location" class="form-control" placeholder="Search Location">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label for="date">Bạn cảm thấy không hài lòng về điều gì ?</label>
+											<div class="form-field">
+												<input type="text" id="location" class="form-control" placeholder="Góp ý của bạn . . .">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-2 col-lg-offset-5">
+										<input type="submit" name="submit" id="submit" value="Góp ý" class="btn btn-primary btn-block rotateOutDownLeft">
+									</div>
 								</div>
-								</div>
-								</div>
-							<div class="col-md-3">
-								<div class="form-group">
-								<label for="date">Start Date:</label>
-								<div class="form-field">
-									<i class="icon icon-calendar2"></i>
-									<input type="text" id="date" class="form-control date" placeholder="Check-in date">
-								</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="form-group">
-								<label for="guests">Categories</label>
-								<div class="form-field">
-									<i class="icon icon-arrow-down3"></i>
-									<select name="category" id="category" class="form-control">
-									<option value="#">Suite</option>
-									<option value="#">Super Deluxe</option>
-									<option value="#">Balcony</option>
-									<option value="#">Economy</option>
-									<option value="#">Luxury</option>
-									</select>
-								</div>
-								</div>
-							</div>
-							<div class="col-md-2">
-								<input type="submit" name="submit" id="submit" value="Find contact" class="btn btn-primary btn-block">
-							</div>
-							</div>
-						</form>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -316,7 +394,7 @@
 					<div class="tour-img" style="background-image: url(images/places/vinhhalong.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Người đánh giá</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
 						<h2>Vịnh Hạ Long</h2>
 						<span class="city">Quảng Ninh</span>
 					</span>
@@ -325,7 +403,7 @@
 					<div class="tour-img" style="background-image: url(images/places/danang.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Người đánh giá</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
 						<h2>Đà Nẵng</h2>
 						<span class="city">Đà Nẵng</span>
 					</span>
@@ -334,7 +412,7 @@
 					<div class="tour-img" style="background-image: url(images/places/phuquoc.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Người đánh giá</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
 						<h2>Phú Quốc</h2>
 						<span class="city">Kiên Giang</span>
 					</span>
@@ -343,7 +421,7 @@
 					<div class="tour-img" style="background-image: url(images/places/sapa.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Người đánh giá</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
 						<h2>Sa Pa</h2>
 						<span class="city">Lào Cai</span>
 					</span>
@@ -352,7 +430,7 @@
 					<div class="tour-img" style="background-image: url(images/places/vungtau.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Người đánh giá</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
 						<h2>Vũng Tàu</h2>
 						<span class="city">Bà Rịa - Vũng Tàu</span>
 					</span>
@@ -361,7 +439,7 @@
 					<div class="tour-img" style="background-image: url(images/places/nhatrang.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Người đánh giá</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
 						<h2>Nha Trang</h2>
 						<span class="city">Khánh Hoà</span>
 					</span>
@@ -370,7 +448,7 @@
 					<div class="tour-img" style="background-image: url(images/places/ninhbinh.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Người đánh giá</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
 						<h2>Ninh Bình</h2>
 					<span class="city">Ninh Bình</span>
 					</span>
@@ -379,7 +457,7 @@
 					<div class="tour-img" style="background-image: url(images/places/tayninh.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Người đánh giá</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
 						<h2>Núi Bà Đen</h2>
 						<span class="city">Tây Ninh</span>
 					</span>
@@ -401,7 +479,8 @@
 									<div class="col-md-6">
 										<div class="row">
 											<div class="col-md-6 animate-box">
-												<a  href="#" class="tour-img" style="background-image: url(images/tours/dalat.jpg);">
+												<a href="#" class="tour-img" style="background-image: url(images/tours/dalat.jpg);">
+													<div class="overlay"></div>
 													<div class="desc">
 														<h3>Đà Lạt | 5 Ngày</h3>
 														<p class="price"><span>2.840.000</span> <small>vnđ</small></p>
@@ -409,7 +488,8 @@
 												</a>
 											</div>
 											<div class="col-md-6 animate-box">
-												<a  href="#" class="tour-img" style="background-image: url(images/tours/sapa3.jpg);">
+												<a href="#" class="tour-img" style="background-image: url(images/tours/sapa3.jpg);">
+													<div class="overlay"></div>
 													<div class="desc">
 															<h3>Sapa | 2 Ngày</h3>
 														<p class="price"><span>2.840.000</span> <small>vnđ</small></p>
@@ -417,7 +497,8 @@
 												</a>
 											</div>
 											<div class="col-md-6 animate-box">
-												<a  href="#" class="tour-img" style="background-image: url(images/tours/condao.jpg);">
+												<a href="#" class="tour-img" style="background-image: url(images/tours/condao.jpg);">
+													<div class="overlay"></div>
 													<div class="desc">
 															<h3>Côn Đảo | 3 Ngày</h3>
 														<p class="price"><span>2.840.000</span> <small>vnđ</small></p>
@@ -425,7 +506,8 @@
 												</a>
 											</div>
 											<div class="col-md-6 animate-box">
-												<a  href="#" class="tour-img" style="background-image: url(images/tours/vungtau.jpg);">
+												<a href="#" class="tour-img" style="background-image: url(images/tours/vungtau.jpg);">
+													<div class="overlay"></div>
 													<div class="desc">
 															<h3>Vũng Tàu | 4 Ngày</h3>
 														<p class="price"><span>2.840.000</span> <small>vnđ</small></p>
@@ -437,7 +519,8 @@
 									<div class="col-md-6">
 										<div class="row">
 											<div class="col-md-6 animate-box">
-												<a  href="#" class="tour-img" style="background-image: url(images/tours/phuquoc2.jpg);">
+												<a href="#" class="tour-img" style="background-image: url(images/tours/phuquoc2.jpg);">
+													<div class="overlay"></div>
 													<div class="desc">
 														<h3>Phú Quốc| 5 Ngày</h3>
 														<p class="price"><span>2.840.000</span> <small>vnđ</small></p>
@@ -445,7 +528,8 @@
 												</a>
 											</div>
 											<div class="col-md-6 animate-box">
-												<a  href="#" class="tour-img" style="background-image: url(images/tours/danang2.jpg);">
+												<a href="#" class="tour-img" style="background-image: url(images/tours/danang2.jpg);">
+													<div class="overlay"></div>
 													<div class="desc">
 															<h3>Đà Nẵng | 3 Ngày</h3>
 														<p class="price"><span>2.840.000</span> <small>vnđ</small></p>
@@ -453,7 +537,8 @@
 												</a>
 											</div>
 											<div class="col-md-6 animate-box">
-												<a  href="#" class="tour-img" style="background-image: url(images/tours/hue.jpg);">
+												<a href="#" class="tour-img" style="background-image: url(images/tours/hue.jpg);">
+													<div class="overlay"></div>
 													<div class="desc">
 															<h3>Huế | 4 Ngày</h3>
 														<p class="price"><span>2.840.000</span> <small>vnđ</small></p>
@@ -461,7 +546,8 @@
 												</a>
 											</div>
 											<div class="col-md-6 animate-box">
-												<a  href="#" class="tour-img" style="background-image: url(images/tours/muine.jpg);">
+												<a href="#" class="tour-img" style="background-image: url(images/tours/muine.jpg);">
+													<div class="overlay"></div>
 													<div class="desc">
 															<h3>Mũi né | 2 Ngày</h3>
 														<p class="price"><span>2.840.000</span> <small>vnđ</small></p>
@@ -489,20 +575,18 @@
 						<div class="col-md-12 animate-box">
 							<div class="owl-carousel">
 								<div class="item">
-										<div class="news-entry">
-											<a href="#" class="news-img" style="background-image: url(images/news/mocchau.jpg);">
-											</a>
-											<div class="desc">
-													<h3><a href="#">Mộc Châu, điểm đáng đi nhất tháng 11 này</a></h3>
-													<span class="place">Ngày đăng 1/11/2018</span>
-													<p>Không phải Hà Giang, cũng chẳng phải Đà Lạt, tháng 11 này Mộc Châu mới là nơi đáng để đi . . . </p>
-											</div>
+									<div class="news-entry">
+										<a href="#" class="news-img" style="background-image: url(images/news/mocchau.jpg);"></a>
+										<div class="desc">
+												<h3><a href="#">Mộc Châu, điểm đáng đi nhất tháng 11 này</a></h3>
+												<span class="place">Ngày đăng 1/11/2018</span>
+												<p>Không phải Hà Giang, cũng chẳng phải Đà Lạt, tháng 11 này Mộc Châu mới là nơi đáng để đi . . . </p>
 										</div>
 									</div>
+								</div>
 								<div class="item">
 									<div class="news-entry">
-										<a href="#" class="news-img" style="background-image: url(images/news/muahoa.jpg);">
-										</a>
+										<a href="#" class="news-img" style="background-image: url(images/news/muahoa.jpg);"></a></a>
 										<div class="desc">
 												<h3><a href="#">Xao xuyến mùa hoa những ngày cuối thu đầu đông</a></h3>
 												<span class="place">Ngày đăng 1/11/2018</span>
@@ -512,8 +596,7 @@
 								</div>
 								<div class="item">
 									<div class="news-entry">
-										<a href="#" class="news-img" style="background-image: url(images/news/music.jpg);">
-										</a>
+										<a href="#" class="news-img" style="background-image: url(images/news/music.jpg);"></a>
 										<div class="desc">
 												<h3><a href="#">7 bài hát nên nghe khi đi du lịch</a></h3>
 												<span class="place">Ngày đăng 1/11/2018</span>
@@ -523,8 +606,7 @@
 								</div>
 								<div class="item">
 										<div class="news-entry">
-											<a href="#" class="news-img" style="background-image: url(images/news/hoian.jpg);">
-											</a>
+											<a href="#" class="news-img" style="background-image: url(images/news/hoian.jpg);"></a>
 											<div class="desc">
 												<h3><a href="#">Một Hội An không chỉ có Phố cổ</a></h3>
 												<span class="place">Ngày đăng 1/11/2018</span>
@@ -551,10 +633,12 @@
 									<li><a href="#"><i class="icon-instagram"></i></a></li>
 								</ul>
 							</p>
-						<p>Nhóm 16</p>
-						<div class="footer-links">
-							<p><a href="http:\\www.S-Travel.com.vn">S-Travel.com.vn</a>
-							</p>
+							<p>GROUP 16</p>
+							<p>Topic : Web Du lịch</p>
+							<div class="footer-links">
+								<p><a href="http:\\www.S-Travel.com.vn">S-Travel.com.vn</a>
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>

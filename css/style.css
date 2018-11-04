@@ -498,6 +498,9 @@ position: relative;
   border: 2px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.7); 
 }
+.form .form-control option{
+  background-color: #2C2E3E;
+}
 .form .form-control:active, .form .form-control:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -726,6 +729,17 @@ position: relative;
   -o-box-shadow: inset 0px -195px 142px -79px rgba(0, 0, 0, 0.49);
   box-shadow: inset 0px -195px 142px -79px rgba(0, 0, 0, 0.49); 
 }
+.tour .tour-img .overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+.tour .tour-img .overlay:hover{
+  background-color: rgba(255, 255, 255, 0.3); 
+}
 .tour .tour-img .desc {
   position: absolute;
   bottom: 0;
@@ -759,7 +773,7 @@ position: relative;
 }
 .tour .desc ul li a:hover {
   color: #000; 
-}  
+}   
 .sidebar-wrap {
   display: block; 
 }
@@ -967,10 +981,12 @@ color: black;
 }
 
 #news .owl-carousel {
-  z-index: 0; }
+  z-index: 0; 
+}
 
 #news .owl-carousel .owl-stage-outer {
-  z-index: -1; }
+  z-index: -1; 
+}
 
 #news .owl-theme .owl-controls {
   margin-top: -10px;
@@ -979,7 +995,8 @@ color: black;
   top: -30px;
   left: 0;
   right: 0;
-  margin-top: -30px; }
+  margin-top: -30px; 
+}
 
 #news .owl-theme .owl-controls .owl-nav [class*=owl-] {
   -webkit-transition: 0.3s;
@@ -1014,6 +1031,8 @@ color: black;
   margin-bottom: 20px;
   position: relative; 
 }
+
+
 .news-entry .news-img .price {
   position: absolute;
   bottom: 0;
@@ -1070,7 +1089,6 @@ color: black;
     margin: 0;
     text-transform: uppercase; 
   }
-.tour-img,
 .tour-img,
 .intro-img,
 .amenities-img,
@@ -1614,8 +1632,8 @@ input[type="text"] {
   border: 1px solid #FFDD00; 
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #ffe01a !important;
-  border-color: #ffe01a !important; }
+  background: #ffe95c !important;
+  border-color: #ffe95c !important; }
 .btn-primary.btn-outline {
   background: transparent;
   color: #FFDD00;
