@@ -275,10 +275,25 @@
 	};
 
 	var datePicker = function() {
-		// jQuery('#time').timepicker();
 		jQuery('.date').datepicker({
 		  'format': 'm/d/yyyy',
 		  'autoclose': true
+		});
+	};
+
+	var north = function() {
+		$("#show-north").click(function(){
+			$("#north-province").toggle();
+		});
+	};
+	var cental = function() {
+		$("#show-cental").click(function(){
+			$("#cental-province").toggle();
+		});
+	};
+	var south = function() {
+		$("#show-south").click(function(){
+			$("#south-province").toggle();
 		});
 	};
 
@@ -295,6 +310,9 @@
 		owlCrouselFeatureSlide();
 		parallax();
 		datePicker();
+		north();
+		cental();
+		south();
 	});
 
 
