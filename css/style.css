@@ -421,18 +421,18 @@ position: relative;
   }
 }
 .wrap2{
+  margin-top: 120px;
   width: 100%;
   display: block;
   float: left;
   z-index: 12;
   position: relative;
-  margin-top:-37em;
   clear: both; 
   background-color: white;
 }
 @media screen and (max-width: 768px) {
   .wrap2{
-    margin-top: -39em;
+    margin-top: 96px;
   } 
 }
 .wrap2 .title{
@@ -1294,9 +1294,14 @@ color: black;
   cursor: pointer;
 }
 
-.news-entry .news-img,
-.hotel-entry .hotel-img {
+.news-entry .news-img{
   height: 280px;
+  display: block;
+  margin-bottom: 20px;
+  position: relative; 
+}
+.hotel-entry .hotel-img {
+  height: 240px;
   display: block;
   margin-bottom: 20px;
   position: relative; 
@@ -1310,13 +1315,6 @@ color: black;
   color: #fff;
   padding: 8px 12px;
   margin: 0; 
-}
-.hotel-entry .hotel-img .price span {
-  font-size: 18px;
-  font-weight: 700; 
-}
-.hotel-entry .hotel-img .price span small {
-  font-size: 16px; 
 }
 .news-entry .desc h3,
 .hotel-entry .desc h3{
@@ -1669,7 +1667,7 @@ article .desc .meta span a {
   font-size: 14px; 
 }
 .room-wrap .desc {
-  padding: 20px 0 0 0; 
+  padding: 0 0 0 0; 
 }
 .room-wrap .day-tour {
   display: block;
@@ -1810,7 +1808,13 @@ article .desc .meta span a {
     color: #000; 
   } 
 }
-
+#contact{
+  width: 100%;
+  display: block;
+  float: left;
+  padding: 3em 0;
+  clear: both; 
+}
 .contact-info-wrap {
   margin-bottom: 3em; 
 }
@@ -2419,12 +2423,27 @@ input[type="text"] {
   text-align: center;
   vertical-align: middle;
 }
+.btn-custom2{
+  margin-top:10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.3em;
+  z-index: 0;
+  position: relative;
+  border-radius: 3px;
+  background-color:#FFDD00;
+  color: #fff;
+  text-transform: uppercase; 
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+}
 .room-img {
   display: block;
   height: 300px; 
 }
 .carousel-thumbnails{
-  margin-top: -40px;
+  margin-top: -70px;
   display: block;
   margin-left: -40px;
   margin-bottom: 30px;
@@ -2465,9 +2484,8 @@ input[type="text"] {
 .bh-photo-grid-thumb-more-inner {
     display: table-cell;
     vertical-align: middle;
-    padding: 0 5px;
     color: #fff;
-    font-size: 1.25em;
+    font-size: 1em;
     background-color: rgba(0,0,0,0.40);
 }
 .bh-photo-grid-thumb-more-inner-2 {
@@ -2626,4 +2644,126 @@ input[type="text"] {
   -webkit-box-shadow: 0px 0px 5px rgba(65, 184, 253, 1);
 }
 */
+
+.tour_name {
+  width: 640px;
+  color: #333;
+  font-size: 15.5px;
+  font-weight: bold;
+  line-height: 20px;
+}
+.item-listtoursearch .desc .star .icon-star-full{
+  color: #FFDD00;
+}
+
+
+.item-listtoursearch .tour-info{
+  font-size: 13px;
+  font-weight: 500;
+  color: #000;
+  padding-left: 0px;
+}
+
+.mg-bot30 {
+  margin-bottom: 30px;
+}
+.mg-bot10 {
+  margin-bottom: 10px;
+}
+.item-listtoursearch {
+  position: relative;
+  background: #f4f4f4;
+}
+
+.f-left {
+  float: left;
+}
+.clear {
+  clear: both;
+}
+.border-right {
+  border-right: 1px solid rgba(204,204,204,0.4);
+}
+
+.item-listtoursearch .tour-info .col-lg-9 {
+  padding-left: 15px !important;
+}
+
+.tour-info .price-new {
+  color: #00BBF0;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.fa{
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+}
+
+
+.item-listtoursearch .btn-chitiet, .item-listtour .btn-chitiet {
+  margin-top: 10px;
+  background: #FFDD00;
+  color: #fff;
+  border-color: #FFDD00;
+  width: 100%;
+  border-radius: 0px !important;
+}
+
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.item-listtoursearch .frame-dinhchuan {
+  position: absolute;
+  top: -22px;
+  right: 20px;
+}
+
+
+.frame-dinhchuan {
+  display: table;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.corner {
+  width: 0;
+  height: 0;
+  border-bottom: 7px solid #333;
+  border-left: 7px solid transparent;
+  position: absolute;
+  top: 15px;
+  right: 70px;
+  z-index: 9999;
+}
+.ribbon-tc {
+  background: #1366b2;
+}
+.ribbon {
+  height: 60px;
+  margin: 0 auto;
+  position: absolute;
+  width: 50px;
+  right: 20px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 22px;
+  font-size: 14.5px;
+  color: #fff;
+  padding-top: 12px;
+  font-weight: 500;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
