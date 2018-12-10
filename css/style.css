@@ -248,7 +248,8 @@ position: relative;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  position: relative; }
+  position: relative; 
+}
 
 #slideshow {
   height: 650px;
@@ -545,7 +546,7 @@ position: relative;
 }
 #breadcrumb{
   margin-bottom: 15px;
-  background: #f4f4f4;
+  background: #f7f7f7;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -1126,7 +1127,7 @@ color: black;
 .sidebar-wrap .stop {
   height: 15px;
   width: 100%;
-  background-color: #f4f4f4;
+  background-color: #f7f7f7;
 }
 .sidebar-wrap .news-heading{
   font-size:20px;
@@ -1302,6 +1303,18 @@ color: black;
 }
 .hotel-entry .hotel-img {
   height: 240px;
+  display: block;
+  margin-bottom: 20px;
+  position: relative; 
+}
+.hotel-entry .hotel-img2 {
+  height: 100px;
+  display: block;
+  margin-bottom: 20px;
+  position: relative; 
+}
+.hotel-entry .hotel-img3 {
+  height: 80px;
   display: block;
   margin-bottom: 20px;
   position: relative; 
@@ -1651,6 +1664,25 @@ article .desc .meta span a {
     margin: 0;
     text-transform: uppercase; 
 }
+.heading3 {
+  margin-bottom: 1px;
+  padding: 20px 30px;
+  background: #f7f7f7;
+  border: 1px solid #f0f0f0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius:10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; 
+}
+.heading3 h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #000;
+    position: relative;
+    margin: 0;
+    text-transform: uppercase; 
+}
 .room-wrap {
   display: block;
   margin-bottom: 4em; 
@@ -1686,6 +1718,8 @@ article .desc .meta span a {
 .intro-img,
 .forum-img,
 .hotel-img,
+.hotel-img2,
+.hotel-img3,
 .amenities-img,
 .news-img {
   background-size: cover;
@@ -1819,7 +1853,7 @@ article .desc .meta span a {
   margin-bottom: 3em; 
 }
 .contact-info-wrap p a {
-  color: #000; 
+  color: #000;
 }
 .contact-info-wrap p span {
   padding-right: 10px; 
@@ -2672,7 +2706,7 @@ input[type="text"] {
 }
 .item-listtoursearch {
   position: relative;
-  background: #f4f4f4;
+  background: #f7f7f7;
 }
 
 .f-left {
@@ -2767,3 +2801,127 @@ input[type="text"] {
   padding-right: 5px;
 }
 
+
+.item-listflightsearch .flight-info{
+  font-size: 13px;
+  font-weight: 500;
+  color: #000;
+  padding-left: 0px;
+}
+.item-listflightsearch {
+  position: relative;
+  background: #f7f7f7;
+}
+.item-listflightsearch .flight-info .col-lg-9 {
+  padding-left: 15px !important;
+}
+
+.flight-info .price-new {
+  color: #00BBF0;
+  font-size: 17px;
+  font-weight: bold;
+}
+.item-listflightsearch .btn-chitiet, .item-listflight .btn-chitiet {
+  margin-top: 10px;
+  background: #FFDD00;
+  color: #fff;
+  border-color: #FFDD00;
+  width: 100%;
+  border-radius: 0px !important;
+}
+.item-listhotelsearch .btn-chitiet, .item-listhotel .btn-chitiet {
+  margin-top: 10px;
+  background: #FFDD00;
+  color: #fff;
+  border-color: #FFDD00;
+  width: 100%;
+  border-radius: 0px !important;
+}
+.item-listflightsearch .frame-dinhchuan {
+  position: absolute;
+  top: -22px;
+  right: 20px;
+}
+.bar .bar-item{
+  float:left;
+  width:auto;
+  display:block;
+}
+.bar-item{
+  width:100%;
+  display:block;
+  padding:8px 16px;
+  text-align:left;
+  text-align:center;
+}
+.bar-item:hover{
+  cursor: pointer;
+  background-color: #e2e2e2;
+}
+.yellow,
+.hover-yellow:hover{
+  color:#fff!important;
+  background-color:#FFDD00!important
+}
+.img-area{
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; 
+  cursor: pointer;
+}
+.info a:hover{
+  color: #000;
+}
+.more a:hover{
+  color: #000;
+  text-decoration: underline;
+}
+.slide-places{
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+}
+.slide-places img{
+  width: 100%;
+  height: 480px;
+}
+.img-slide-places img{
+  margin-top: 15px;
+  width: 100%;
+  height: 70px;
+  cursor: pointer;
+}
+.opacity-img-place,
+.opacity-img-place-hover:hover{
+  opacity:0.60
+}
+.opacity-img-place-off,.opacity-img-place-hover-off:hover{
+  opacity:1
+}
+.opacity-img-place-max{
+  opacity:0.25
+}
+.opacity-img-place-min{
+  opacity:0.75
+}
+@media screen and (max-width: 768px) {
+  .slide-places img{
+    height: 360px;
+  } 
+}
+.content-place{
+  background: #f7f7f7;
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+.content-place textarea{
+  height: 100px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  border: 0px;
+}
