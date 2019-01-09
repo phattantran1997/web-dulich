@@ -2599,6 +2599,24 @@ input[type="text"] {
   background: black;
   position: absolute;
 }
+#aligncenter-circle{
+  width: 200px;
+  height: 200px;
+}
+#aligncenter-label{
+  padding-left: 50px; 
+  padding-top: 75px;
+}
+@media screen and (max-width: 1023px) {
+  #aligncenter-circle{
+    margin:0 auto;
+  }
+  #aligncenter-label{
+    text-align: center;
+    padding-left: 0px; 
+    padding-top: 20px;
+  }
+}
 /*
 .ratio1{
   margin: 90px;

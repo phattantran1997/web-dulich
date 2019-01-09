@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE HTML>
 <html>
-	<head>
+
+<head>
 	<meta charset="utf-8">
 	<title>S-Travel</title>
 	<link rel="shortcut icon" href=".\Images\icons\vn-icon.png">
@@ -28,10 +29,11 @@
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
-	</head>
-	<body>
+</head>
+
+<body>
 	<div class="loader"></div>
-	<div id="page"  onmouseup="MouseUp(event)">
+	<div id="page" onmouseup="MouseUp(event)">
 		<nav class="topnav">
 			<div class="top-menu">
 				<div class="row">
@@ -95,17 +97,17 @@
 							</div>
 						</div>
 					</li>
-			  	</ul>
-		  	</div>
+				</ul>
+			</div>
 		</aside>
-		
+
 		<div id="reservation">
 			<div class="row">
 				<div class="search-wrap" id="offset-sw">
 					<div class="container">
 						<ul class="nav nav-tabs">
 							<li class="active">
-							<a data-toggle="tab" href="#search"><i class="icon-search"></i> Tìm nhanh</a></li>
+								<a data-toggle="tab" href="#search"><i class="icon-search"></i> Tìm nhanh</a></li>
 							<li><a data-toggle="tab" href="#tours"><i class="icon-compass2"></i> Tours</a></li>
 							<li><a data-toggle="tab" href="#hotel"><i class="icon-home"></i> Khách sạn</a></li>
 							<li><a data-toggle="tab" href="#planes"><i class="icon-airplane"></i> Máy bay</a></li>
@@ -168,12 +170,17 @@
 											</div>
 										</div>
 										<div class="col-md-2" id="offset-circle">
-											<div class="circle1" id="outside" onmousedown="MouseDown(event)"
-																				onmouseup="MouseUp(event)"
-																				onmousemove="MouseMove(event)">
-												
-												<div class="center-circle"></div>
-												<!--										
+											<div id="aligncenter-circle">
+												<div class="circle1" id="outside"
+												onmousedown="MouseDown(event)"
+												onmouseup="MouseUp(event)"
+												onmousemove="MouseMove(event)"
+												ontouchstart="TouchStart(event)"	
+												ontouchend="TouchEnd(event)"
+												ontouchmove="TouchMove(event)">
+
+													<div class="center-circle"></div>
+													<!--										
 												<div class="ratio1"></div>
 												<div class="ratio2"></div>
 												<div class="ratio3"></div>
@@ -183,43 +190,20 @@
 												<div class="ratio6"></div>
 												-->
 
-												<div class="circle2" id="inside"></div>
-												
-											</div>
-										</div>
-										<div class="col-md-2" style="margin-top: 45px">
-											<label id="range">Tìm trong phạm vi <br><br> &nbsp &nbsp &nbsp &nbsp &nbsp &#62; 1 Km </label>
-										</div>
-
-										<!--
-										<div class="col-md-3">
-											<div class="form-group">
-												<label for="guests">Tìm trong bán kính</label>
-												<div class="form-field">
-													<i class="icon icon-arrow-down3"></i>
-													<select name="people" id="people" class="form-control">
-														<option value="#">Toàn khu vực</option>
-														<option value="#">1 km</option>
-														<option value="#">2 km</option>
-														<option value="#">5 km</option>
-														<option value="#">10km</option>
-														<option value="#">15km</option>
-														<option value="#">20km</option>
-													</select>
+													<div class="circle2" id="inside"></div>
 												</div>
 											</div>
 										</div>
-										-->
-										<!--
-										<div class="col-md-12">
-											<div class="form-group">
-												<label for="date">Nơi bạn muốn tìm kiếm là gì?</label>
-												<div class="form-field">
-													<input type="text" id="location" class="form-control" placeholder="Bất kì đâu . . . ">
-												</div>
+										<div class="col-md-2">
+											<div id="aligncenter-label">
+												<label id="range">
+													Phạm vi 
+													<br>
+													<!--&#62;--> 
+													nhỏ hơn 1 Km 
+												</label>
 											</div>
 										</div>
-										-->
 										<div class="col-md-2 col-md-offset-5">
 											<input type="submit" name="submit" id="submit" value="Tìm kiếm" class="btn btn-primary btn-block rotateOutDownLeft">
 										</div>
@@ -266,28 +250,28 @@
 										</div>
 									</div>
 									<div class="col-md-2">
-									<div class="form-group">
-										<label for="date">Ngày xuất phát</label>
-										<div class="form-field">
-											<i class="icon icon-calendar2"></i>
-											<input type="text" id="date" class="form-control date" placeholder="Ngày xuất phát">
+										<div class="form-group">
+											<label for="date">Ngày xuất phát</label>
+											<div class="form-field">
+												<i class="icon icon-calendar2"></i>
+												<input type="text" id="date" class="form-control date" placeholder="Ngày xuất phát">
+											</div>
 										</div>
-									</div>
 									</div>
 									<div class="col-md-2">
-									<div class="form-group">
-										<label for="guests">Loại tour</label>
-										<div class="form-field">
-											<i class="icon icon-arrow-down3"></i>
-											<select name="people" id="people" class="form-control">
-												<option value="#">Tất cả</option>
-												<option value="#">Cao cấp</option>
-												<option value="#">Tiêu chuẩn</option>
-												<option value="#">Tiết kiệm</option>
-												<option value="#">Giá tốt</option>
-											</select>
+										<div class="form-group">
+											<label for="guests">Loại tour</label>
+											<div class="form-field">
+												<i class="icon icon-arrow-down3"></i>
+												<select name="people" id="people" class="form-control">
+													<option value="#">Tất cả</option>
+													<option value="#">Cao cấp</option>
+													<option value="#">Tiêu chuẩn</option>
+													<option value="#">Tiết kiệm</option>
+													<option value="#">Giá tốt</option>
+												</select>
+											</div>
 										</div>
-									</div>
 									</div>
 									<div class="col-md-2">
 										<div class="form-group">
@@ -315,93 +299,93 @@
 						</div>
 
 						<div id="hotel" class="tab-pane fade">
-						<form method="post" class="form">
-							<div class="row">
-								<div class="col-md-3">
-									<div class="form-group">
-										<label for="guests">Tỉnh thành</label>
-										<div class="form-field">
-											<i class="icon icon-arrow-down3"></i>
-											<select name="people" id="people" class="form-control">
-												<option value="#">Tỉnh/Thành</option>
-												<option value="#">HCM</option>
-												<option value="#">Đà lạt</option>
-												<option value="#">Đà nẵng </option>
-												<option value="#">Huế</option>
-												<option value="#">Hà Nội</option>
-												<option value="#">Hải Phòng</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-2">
-									<div class="form-group">
-										<label for="date">Nhận phòng</label>
-										<div class="form-field">
-											<i class="icon icon-calendar2"></i>
-											<input type="text" id="date" class="form-control date" placeholder="Ngày nhận">
-										</div>
-									</div>
-								</div>
-								<div class="col-md-2">
-									<div class="form-group">
-										<label for="date">Trả phòng</label>
+							<form method="post" class="form">
+								<div class="row">
+									<div class="col-md-3">
+										<div class="form-group">
+											<label for="guests">Tỉnh thành</label>
 											<div class="form-field">
-											<i class="icon icon-calendar2"></i>
-										<input type="text" id="date" class="form-control date" placeholder="Ngày trả">
-									</div>
-								</div>
-								</div>
-								<div class="col-md-1">
-									<div class="form-group">
-										<label for="guests">Số phòng</label>
-										<div class="form-field">
-											<i class="icon icon-arrow-down3"></i>
-											<select name="people" id="people" class="form-control">
-												<option value="#">1 </option>
-												<option value="#">2 </option>
-												<option value="#">3 </option>
-												<option value="#">4 </option>
-												<option value="#">5 </option>
-												<option value="#">6 </option>
-											</select>
+												<i class="icon icon-arrow-down3"></i>
+												<select name="people" id="people" class="form-control">
+													<option value="#">Tỉnh/Thành</option>
+													<option value="#">HCM</option>
+													<option value="#">Đà lạt</option>
+													<option value="#">Đà nẵng </option>
+													<option value="#">Huế</option>
+													<option value="#">Hà Nội</option>
+													<option value="#">Hải Phòng</option>
+												</select>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="col-md-2">
-									<div class="form-group">
-										<label for="guests">Người lớn</label>
-										<div class="form-field">
-											<i class="icon icon-arrow-down3"></i>
-											<select name="people" id="people" class="form-control">
-												<option value="#">1 Người lớn</option>
-												<option value="#" selected="selected" >2 Người lớn</option>
-												<option value="#">3 Người lớn</option>
-												<option value="#">4 Người lớn</option>
-												<option value="#">5 Người lớn</option>
-												<option value="#">6 Người lớn</option>
-											</select>
+									<div class="col-md-2">
+										<div class="form-group">
+											<label for="date">Nhận phòng</label>
+											<div class="form-field">
+												<i class="icon icon-calendar2"></i>
+												<input type="text" id="date" class="form-control date" placeholder="Ngày nhận">
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="col-md-2">
-									<div class="form-group">
-										<label for="guests">Trẻ em</label>
-										<div class="form-field">
-											<i class="icon icon-arrow-down3"></i>
-											<select name="people" id="people" class="form-control">
-												<option value="#" selected="selected">0 Trẻ em</option>
-												<option value="#">1 Trẻ em</option>
-												<option value="#">2 Trẻ em</option>
-												<option value="#">3 Trẻ em</option>
-												<option value="#">4 Trẻ em</option>
-												<option value="#">5 Trẻ em</option>
-												<option value="#">6 Trẻ em</option>
-											</select>
+									<div class="col-md-2">
+										<div class="form-group">
+											<label for="date">Trả phòng</label>
+											<div class="form-field">
+												<i class="icon icon-calendar2"></i>
+												<input type="text" id="date" class="form-control date" placeholder="Ngày trả">
+											</div>
 										</div>
 									</div>
-								</div> 		
-								<!--						
+									<div class="col-md-1">
+										<div class="form-group">
+											<label for="guests">Số phòng</label>
+											<div class="form-field">
+												<i class="icon icon-arrow-down3"></i>
+												<select name="people" id="people" class="form-control">
+													<option value="#">1 </option>
+													<option value="#">2 </option>
+													<option value="#">3 </option>
+													<option value="#">4 </option>
+													<option value="#">5 </option>
+													<option value="#">6 </option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<label for="guests">Người lớn</label>
+											<div class="form-field">
+												<i class="icon icon-arrow-down3"></i>
+												<select name="people" id="people" class="form-control">
+													<option value="#">1 Người lớn</option>
+													<option value="#" selected="selected">2 Người lớn</option>
+													<option value="#">3 Người lớn</option>
+													<option value="#">4 Người lớn</option>
+													<option value="#">5 Người lớn</option>
+													<option value="#">6 Người lớn</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<label for="guests">Trẻ em</label>
+											<div class="form-field">
+												<i class="icon icon-arrow-down3"></i>
+												<select name="people" id="people" class="form-control">
+													<option value="#" selected="selected">0 Trẻ em</option>
+													<option value="#">1 Trẻ em</option>
+													<option value="#">2 Trẻ em</option>
+													<option value="#">3 Trẻ em</option>
+													<option value="#">4 Trẻ em</option>
+													<option value="#">5 Trẻ em</option>
+													<option value="#">6 Trẻ em</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<!--						
 								<div class="col-md-1">
 									<div class="form-group">
 										<label for="guests">Người lớn</label>
@@ -450,12 +434,12 @@
 										</div>
 									</div>
 								</div>
-								-->	
-								<div class="col-md-2 col-md-offset-5">
-									<input type="submit" name="submit" id="submit" value="Tìm kiếm" class="btn btn-primary btn-block rotateOutDownLeft">
-								</div> 
-							</div>
-						</form>
+								-->
+									<div class="col-md-2 col-md-offset-5">
+										<input type="submit" name="submit" id="submit" value="Tìm kiếm" class="btn btn-primary btn-block rotateOutDownLeft">
+									</div>
+								</div>
+							</form>
 						</div>
 
 						<div id="planes" class="tab-pane fade">
@@ -521,13 +505,13 @@
 											<div class="form-field">
 												<i class="icon icon-arrow-down3"></i>
 												<select name="people" id="people" class="form-control">
-													<option value="#" > Tất cả</option>
-													<option value="#" > Hàng không Quốc gia Việt Nam</option>
+													<option value="#"> Tất cả</option>
+													<option value="#"> Hàng không Quốc gia Việt Nam</option>
 													<option value="#"> VietJet Air </option>
 													<option value="#"> Jetstar Pacific Airlines </option>
 													<option value="#"> Korean Air </option>
 													<option value="#"> China Southern Airlines </option>
-													<option value="#"> Emirates  </option>
+													<option value="#"> Emirates </option>
 												</select>
 											</div>
 										</div>
@@ -539,7 +523,7 @@
 												<i class="icon icon-arrow-down3"></i>
 												<select name="people" id="people" class="form-control">
 													<option value="#">1 Người lớn</option>
-													<option value="#" selected="selected" >2 Người lớn</option>
+													<option value="#" selected="selected">2 Người lớn</option>
 													<option value="#">3 Người lớn</option>
 													<option value="#">4 Người lớn</option>
 													<option value="#">5 Người lớn</option>
@@ -597,7 +581,9 @@
 								<img src=".\Images\icons\North-icon.png">
 							</span>
 							<h3>Miền Bắc</h3>
-							<p>Miền Bắc Việt Nam gồm Tây Bắc, Đông Bắc và đồng bằng Sông Hồng, là cái nôi văn hóa lịch sử hàng ngàn năm của Việt Nam. Thiên nhiên và cảnh đẹp hùng vĩ, 4 mùa xuân hạ thu đông, miền Bắc luôn là điểm hẹn hấp dẫn cho ta trở lại nhiều lần.
+							<p>Miền Bắc Việt Nam gồm Tây Bắc, Đông Bắc và đồng bằng Sông Hồng, là cái nôi văn hóa lịch sử hàng ngàn năm của
+								Việt Nam. Thiên nhiên và cảnh đẹp hùng vĩ, 4 mùa xuân hạ thu đông, miền Bắc luôn là điểm hẹn hấp dẫn cho ta trở
+								lại nhiều lần.
 							</p>
 						</div>
 					</div>
@@ -607,7 +593,9 @@
 								<img src=".\Images\icons\Cental-icon.png">
 							</span>
 							<h3>Miền Trung</h3>
-							<p>Miền Trung Việt Nam gồm Bắc Trung Bộ, Nam Trung Bộ và Tây Nguyên, tổng 19 tỉnh thành. Miền Trung là giao điểm của sông núi hữu tình, thiên nhiên hùng vĩ, văn hóa đặc sắc, pha trộn ảnh hưởng của Hindu và Trung Hoa. Một điểm đến lý tưởng!
+							<p>Miền Trung Việt Nam gồm Bắc Trung Bộ, Nam Trung Bộ và Tây Nguyên, tổng 19 tỉnh thành. Miền Trung là giao điểm
+								của sông núi hữu tình, thiên nhiên hùng vĩ, văn hóa đặc sắc, pha trộn ảnh hưởng của Hindu và Trung Hoa. Một
+								điểm đến lý tưởng!
 							</p>
 						</div>
 					</div>
@@ -617,7 +605,9 @@
 								<img src=".\Images\icons\East-icon.png">
 							</span>
 							<h3>Miền Nam</h3>
-							<p>Miền Nam thân thương với rất nhiều điểm du lịch đẹp giàu chất thơ như Phú Quốc, Côn Đảo, Cần Thơ, Long Hải...với rất nhiều di tích lịch sử oai hùng của một thời dựng nước và giữ nước song hành với đó là máu và nước mắt.</p>
+							<p>Miền Nam thân thương với rất nhiều điểm du lịch đẹp giàu chất thơ như Phú Quốc, Côn Đảo, Cần Thơ, Long
+								Hải...với rất nhiều di tích lịch sử oai hùng của một thời dựng nước và giữ nước song hành với đó là máu và nước
+								mắt.</p>
 						</div>
 					</div>
 				</div>
@@ -637,7 +627,8 @@
 					<div class="tour-img" style="background-image: url(images/places/vinhhalong.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i
+								 class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
 						<h2>Vịnh Hạ Long</h2>
 						<span class="city">Quảng Ninh</span>
 					</span>
@@ -646,7 +637,8 @@
 					<div class="tour-img" style="background-image: url(images/places/danang.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i
+								 class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
 						<h2>Đà Nẵng</h2>
 						<span class="city">Đà Nẵng</span>
 					</span>
@@ -655,7 +647,8 @@
 					<div class="tour-img" style="background-image: url(images/places/phuquoc.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i
+								 class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
 						<h2>Phú Quốc</h2>
 						<span class="city">Kiên Giang</span>
 					</span>
@@ -664,7 +657,8 @@
 					<div class="tour-img" style="background-image: url(images/places/sapa.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i
+								 class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
 						<h2>Sa Pa</h2>
 						<span class="city">Lào Cai</span>
 					</span>
@@ -673,7 +667,8 @@
 					<div class="tour-img" style="background-image: url(images/places/vungtau.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i
+								 class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
 						<h2>Vũng Tàu</h2>
 						<span class="city">Bà Rịa - Vũng Tàu</span>
 					</span>
@@ -682,7 +677,8 @@
 					<div class="tour-img" style="background-image: url(images/places/nhatrang.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i
+								 class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
 						<h2>Nha Trang</h2>
 						<span class="city">Khánh Hoà</span>
 					</span>
@@ -691,16 +687,18 @@
 					<div class="tour-img" style="background-image: url(images/places/ninhbinh.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i
+								 class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
 						<h2>Ninh Bình</h2>
-					<span class="city">Ninh Bình</span>
+						<span class="city">Ninh Bình</span>
 					</span>
 				</a>
-				<a  target="_blank" href="#" class="tour-entry animate-box">
+				<a target="_blank" href="#" class="tour-entry animate-box">
 					<div class="tour-img" style="background-image: url(images/places/tayninh.jpg);">
 					</div>
 					<span class="desc">
-						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
+						<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i
+								 class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Lượt đánh giá</p>
 						<h2>Núi Bà Đen</h2>
 						<span class="city">Tây Ninh</span>
 					</span>
@@ -716,7 +714,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-12"> 
+					<div class="col-md-12">
 						<div class="tour">
 							<div class="row row-pb-md">
 								<div class="col-md-6">
@@ -733,7 +731,7 @@
 										<div class="col-md-6 animate-box">
 											<a href="#" class="tour-img" style="background-image: url(images/tours/sapa3.jpg);">
 												<div class="desc">
-														<h3>Sapa | 2 Ngày</h3>
+													<h3>Sapa | 2 Ngày</h3>
 													<p><span>2.840.000</span> <small>vnđ</small></p>
 												</div>
 												<div class="overlay"></div>
@@ -742,7 +740,7 @@
 										<div class="col-md-6 animate-box">
 											<a href="#" class="tour-img" style="background-image: url(images/tours/condao.jpg);">
 												<div class="desc">
-														<h3>Côn Đảo | 3 Ngày</h3>
+													<h3>Côn Đảo | 3 Ngày</h3>
 													<p><span>2.840.000</span> <small>vnđ</small></p>
 												</div>
 												<div class="overlay"></div>
@@ -751,7 +749,7 @@
 										<div class="col-md-6 animate-box">
 											<a href="#" class="tour-img" style="background-image: url(images/tours/vungtau.jpg);">
 												<div class="desc">
-														<h3>Vũng Tàu | 4 Ngày</h3>
+													<h3>Vũng Tàu | 4 Ngày</h3>
 													<p><span>2.840.000</span> <small>vnđ</small></p>
 												</div>
 												<div class="overlay"></div>
@@ -773,7 +771,7 @@
 										<div class="col-md-6 animate-box">
 											<a href="#" class="tour-img" style="background-image: url(images/tours/danang2.jpg);">
 												<div class="desc">
-														<h3>Đà Nẵng | 3 Ngày</h3>
+													<h3>Đà Nẵng | 3 Ngày</h3>
 													<p><span>2.840.000</span> <small>vnđ</small></p>
 												</div>
 												<div class="overlay"></div>
@@ -782,7 +780,7 @@
 										<div class="col-md-6 animate-box">
 											<a href="#" class="tour-img" style="background-image: url(images/tours/hue.jpg);">
 												<div class="desc">
-														<h3>Huế | 4 Ngày</h3>
+													<h3>Huế | 4 Ngày</h3>
 													<p><span>2.840.000</span> <small>vnđ</small></p>
 												</div>
 												<div class="overlay"></div>
@@ -791,7 +789,7 @@
 										<div class="col-md-6 animate-box">
 											<a href="#" class="tour-img" style="background-image: url(images/tours/muine.jpg);">
 												<div class="desc">
-														<h3>Mũi né | 2 Ngày</h3>
+													<h3>Mũi né | 2 Ngày</h3>
 													<p><span>2.840.000</span> <small>vnđ</small></p>
 												</div>
 												<div class="overlay"></div>
@@ -853,7 +851,8 @@
 									<div class="desc">
 										<h3><a href="news-detail.html">Một Hội An không chỉ có Phố cổ</a></h3>
 										<span class="place">Ngày đăng 1/11/2018</span>
-										<p>Hội An có rất nhiều điều thú vị không chỉ riêng phố cổ. Nếu đã chán lòng vòng khu phố cổ, leo lên xe máy chạy một tí . . .</p>
+										<p>Hội An có rất nhiều điều thú vị không chỉ riêng phố cổ. Nếu đã chán lòng vòng khu phố cổ, leo lên xe máy
+											chạy một tí . . .</p>
 									</div>
 								</div>
 							</div>
@@ -863,7 +862,8 @@
 									<div class="desc">
 										<h3><a href="news-detail.html">Chợ nổi Cái Răng và vẻ đẹp miền Tây sông nước</a></h3>
 										<span class="place">Ngày đăng 1/11/2018</span>
-										<p>Chợ trên sông là một nét văn hóa rất đặc trưng của miền Tây. Tiêu biểu nhất trong đó là chợ nổi Cái Răng ở Cần Thơ . . .</p>
+										<p>Chợ trên sông là một nét văn hóa rất đặc trưng của miền Tây. Tiêu biểu nhất trong đó là chợ nổi Cái Răng ở
+											Cần Thơ . . .</p>
 									</div>
 								</div>
 							</div>
@@ -878,7 +878,8 @@
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center heading animate-box">
 						<h1>Diễn đàn cung đường lửa</h1>
-						<p> Chúng tôi muốn kết nối mọi người lại với nhau tạo thành một hệ sinh thái du lịch vững mạnh. Chia sẻ những kinh nghiệm sau mỗi chuyến đi.</p>
+						<p> Chúng tôi muốn kết nối mọi người lại với nhau tạo thành một hệ sinh thái du lịch vững mạnh. Chia sẻ những
+							kinh nghiệm sau mỗi chuyến đi.</p>
 					</div>
 				</div>
 				<div class="forum-flex">
@@ -929,7 +930,7 @@
 					<p>Hãy để lại thông tin, chúng tôi sẽ tìm giúp bạn </p>
 				</div>
 			</div>
-			
+
 			<div class="row ">
 				<div class="background">
 					<div class="container">
@@ -1010,9 +1011,9 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="testimony">
-			<div class="container"> 
+			<div class="container">
 				<div class="row">
 					<div class="col-md-4 hidden-sm hidden-xs">
 						<div class="testimony-text-mid">
@@ -1024,21 +1025,24 @@
 							<div class="item">
 								<div class="text-center">
 									<blockquote>
-										<p>"Tôi biết đến <span style="font-weight:bold">Vịnh Hạ Long</span> như một định mệnh. Tôi đã đến đây và tôi thấy nơi đây thực sự tuyệt vời, với những núi đá vôi sừng sững mọc lên giữa biển khơi."</p>
+										<p>"Tôi biết đến <span style="font-weight:bold">Vịnh Hạ Long</span> như một định mệnh. Tôi đã đến đây và tôi
+											thấy nơi đây thực sự tuyệt vời, với những núi đá vôi sừng sững mọc lên giữa biển khơi."</p>
 									</blockquote>
 								</div>
 							</div>
 							<div class="item">
 								<div class="text-center">
 									<blockquote>
-										<p>"Tôi biết đến <span style="font-weight:bold">Vịnh Hạ Long</span> như một định mệnh. Tôi đã đến đây và tôi thấy nơi đây thực sự tuyệt vời, với những núi đá vôi sừng sững mọc lên giữa biển khơi."</p>
+										<p>"Tôi biết đến <span style="font-weight:bold">Vịnh Hạ Long</span> như một định mệnh. Tôi đã đến đây và tôi
+											thấy nơi đây thực sự tuyệt vời, với những núi đá vôi sừng sững mọc lên giữa biển khơi."</p>
 									</blockquote>
 								</div>
 							</div>
 							<div class="item">
 								<div class="text-center">
 									<blockquote>
-										<p>"Tôi biết đến <span style="font-weight:bold">Vịnh Hạ Long</span> như một định mệnh. Tôi đã đến đây và tôi thấy nơi đây thực sự tuyệt vời, với những núi đá vôi sừng sững mọc lên giữa biển khơi."</p>
+										<p>"Tôi biết đến <span style="font-weight:bold">Vịnh Hạ Long</span> như một định mệnh. Tôi đã đến đây và tôi
+											thấy nơi đây thực sự tuyệt vời, với những núi đá vôi sừng sững mọc lên giữa biển khơi."</p>
 									</blockquote>
 								</div>
 							</div>
@@ -1097,5 +1101,6 @@
 	<!-- Range of circle :)) -->
 	<script src="js/circle.js"></script>
 
-	</body>
+</body>
+
 </html>
